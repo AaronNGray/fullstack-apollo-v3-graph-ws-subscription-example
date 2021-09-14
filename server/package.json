@@ -1,0 +1,35 @@
+{
+  "name": "apollo-server-subscription-setup-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "keywords": [],
+  "author": "“Robin <rwieruch@fastmail.com> (https://www.robinwieruch.de)",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.3.0",
+    "apollo-server-express": "^3.3.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.4",
+    "graphql": "^15.5.3",
+    "graphql-playground-middleware-express": "^1.7.22",
+    "graphql-subscriptions": "^1.2.1",
+    "graphql-ws": "^5.5.0",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.2.1",
+    "type-graphql": "^1.1.1",
+    "typescript": "^4.4.2",
+    "ws": "^8.2.2"
+  },
+  "devDependencies": {
+    "@types/ws": "^7.4.7",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "nodemon": "^1.18.7"
+  }
+}
