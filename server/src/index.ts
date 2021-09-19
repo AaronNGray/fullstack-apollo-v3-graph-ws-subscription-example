@@ -9,9 +9,9 @@ import { PubSub } from 'graphql-subscriptions';
 import { ApolloServer, gql } from 'apollo-server-express';
 import expressPlayground from "graphql-playground-middleware-express";
 
-import { MessageResolver } from './types';
-
 const MESSAGE_CREATED = 'MESSAGE_CREATED';
+
+const pubSub = new PubSub();
 
 const typeDefs = gql`
   type Query {
@@ -37,23 +37,17 @@ const resolvers = {
   },
   Subscription: {
     messageCreated: {
-      subscribe: () => pubsub.asyncIterator(MESSAGE_CREATED),
+      subscribe: () => pubSub.asyncIterator(MESSAGE_CREATED),
     },
   },
 };
 
-const schema = makeExecutableSchema({ typeDefs, resolvers });
 
 (async () => {
     const app = express();
     const httpServer = createServer(app);
 
-    const pubSub = new PubSub();
-
-    const schema = await buildSchema({
-        resolvers: [MessageResolver],
-        pubSub
-    });
+    const schema = makeExecutableSchema({ typeDefs, resolvers });
 
     const server = new ApolloServer({
         schema

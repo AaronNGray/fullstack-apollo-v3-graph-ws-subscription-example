@@ -8,7 +8,7 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "keywords": [],
-  "author": "“Robin <rwieruch@fastmail.com> (https://www.robinwieruch.de)",
+  "author": "AaronNGray <aaronngray@gmail.com> & Robin <rwieruch@fastmail.com> (https://www.robinwieruch.de)",
   "license": "ISC",
   "dependencies": {
     "apollo-server": "^3.3.0",

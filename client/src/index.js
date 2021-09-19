@@ -4,6 +4,7 @@ import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-client';
 import { getMainDefinition } from 'apollo-utilities';
 import { ApolloLink, split } from 'apollo-link';
+import { WebSocketLink } from 'apollo-client-graphql-ws';
 import { HttpLink } from 'apollo-link-http';
 import { createClient } from 'graphql-ws';
 import { InMemoryCache } from 'apollo-cache-inmemory';
@@ -16,14 +17,10 @@ const httpLink = new HttpLink({
 });
 
 const wsLink = new WebSocketLink({
-  uri: `ws://localhost:8000/graphql`,
+  url: `ws://localhost:8000/graphql`,
   options: {
     reconnect: true,
   },
-});
-
-const client = createClient({
-    url: 'ws://localhost:4000/subscriptions',
 });
 
 const terminatingLink = split(
