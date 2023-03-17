@@ -1,4 +1,4 @@
-# fullstack-apollo-graphql-ws-subscription-example
+# fullstack-apollo-v3-graphql-ws-subscription-example
 
 A minimal Apollo Server 3 with Apollo Client 3 application with subscriptions using apollo-client-graphql-ws and graph-ws.
 
