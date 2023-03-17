@@ -4,8 +4,8 @@ A minimal Apollo Server 3 with Apollo Client 3 application with subscriptions us
 
 ## Installation
 
-* `git clone https://github.com/AaronNGray/fullstack-apollo-graphql-ws-subscription-example.git`
-* `cd fullstack-apollo-graphql-ws-subscription-example`
+* `git clone https://github.com/AaronNGray/fullstack-apollo-v3-graphql-ws-subscription-example.git`
+* `cd fullstack-apollo-v3-graphql-ws-subscription-example`
 
 ### Server
 
